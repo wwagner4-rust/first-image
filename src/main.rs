@@ -4,7 +4,7 @@ use std::cmp::min;
 use rayon::prelude::*;
 
 fn main() {
-    let n = 10;
+    let n = 100;
     let index_list: Vec<i16> = (0..n).into_iter().collect();
     index_list.par_iter().for_each(|i| create_and_write_image(i, &(n - 1)));
 }
